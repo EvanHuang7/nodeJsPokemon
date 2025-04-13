@@ -1,0 +1,26 @@
+
+Increase by 一级的10%: 10, 2, 1, 1
+			health		strength	defense		speed		
+小火龙(lv1-20)		100		20		10		10
+lowQuality(1)		300		60		30		30
+middle(3)		700		140		70		70
+highQuality(5)		1100		220		110		110
+
+
+火恐龙(lv1-50)		100		20		10		10
+lowQuality(3)		1600		310		160		160
+middle(5)
+highQuality(7)		3600		720		360		360
+
+
+喷火龙(lv1-80)		
+lowQuality(5)
+middle(7)
+highQuality(9)
+
+
+Mega喷火龙(lv1-100)	
+lowQuality(7)
+highQuality(10)
+
+

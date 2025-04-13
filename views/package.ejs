@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('./partials/header.ejs'); %>
+  <link rel="stylesheet" href="../statics/main.css">
+  <title>Package</title>
+</head>
+
+<body>
+  <%- include('./partials/navbar.ejs'); %>
+  <h1>My Package</h1>
+
+  <div class="container">
+    <div class="row">
+
+
+      <div class="col-md-4 col-lg-3 my-2">
+        <div class="card mb-3 h-100" style="max-width: 400px;">
+          <div class="row no-gutters">
+            <div class="col-4">
+              <img src="../statics/itemsImg/goldCoin.jpg" class="card-img" alt="...">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <h5 class="card-title">goldCoin: <%= items.goldCoin %></h5>
+                <p class="card-text">Buying items and normal pokemon lottery</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-4 col-lg-3 my-2">
+        <div class="card mb-3 h-100" style="max-width: 400px;">
+          <div class="row no-gutters">
+            <div class="col-4">
+              <img src="../statics/itemsImg/diamond.jpg" class="card-img" alt="...">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <h5 class="card-title">diamond: <%= items.diamond %></h5>
+                <p class="card-text">Buying items and golden pokemon lottery</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <% if(items.candy != 0){ %>
+      <div class="col-md-4 col-lg-3 my-2">
+        <div class="card mb-3 h-100" style="max-width: 400px;">
+          <div class="row no-gutters">
+            <div class="col-4">
+              <img src="../statics/itemsImg/candy.jpg" class="card-img" alt="...">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <h5 class="card-title">candy: <%= items.candy %></h5>
+                <p class="card-text">Increasing pokemon 100 experience (10 gold)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }; %>
+
+
+      <% if(items.marioMushroom != 0){ %>
+      <div class="col-md-4 col-lg-3 my-2">
+        <div class="card mb-3 h-100" style="max-width: 400px;">
+          <div class="row no-gutters">
+            <div class="col-4">
+              <img src="../statics/itemsImg/marioMushroom.jpg" class="card-img" alt="...">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <h5 class="card-title">marioMushroom: <%= items.marioMushroom %></h5>
+                <p class="card-text">Increasing pokemon 1 level (500 gold)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }; %>
+
+
+      <% if(items.healthPotion != 0){ %>
+      <div class="col-md-4 col-lg-3 my-2">
+        <div class="card mb-3 h-100" style="max-width: 400px;">
+          <div class="row no-gutters">
+            <div class="col-4">
+              <img src="../statics/itemsImg/healthPotion.jpg" class="card-img" alt="...">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <h5 class="card-title">healthPotion: <%= items.healthPotion %></h5>
+                <p class="card-text">Add pokemon total health by 10 (100 gold)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }; %>
+
+
+      <% if(items.strengthPotion != 0){ %>
+      <div class="col-md-4 col-lg-3 my-2">
+        <div class="card mb-3 h-100" style="max-width: 400px;">
+          <div class="row no-gutters">
+            <div class="col-4">
+              <img src="../statics/itemsImg/strengthPotion.jpg" class="card-img" alt="...">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <h5 class="card-title">strengthPotion: <%= items.strengthPotion %></h5>
+                <p class="card-text">Add pokemon total strength by 1 (100 gold)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }; %>
+
+
+      <% if(items.defensePotion != 0){ %>
+      <div class="col-md-4 col-lg-3 my-2">
+        <div class="card mb-3 h-100" style="max-width: 400px;">
+          <div class="row no-gutters">
+            <div class="col-4">
+              <img src="../statics/itemsImg/defensePotion.jpg" class="card-img" alt="...">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <h5 class="card-title">defensePotion: <%= items.defensePotion %></h5>
+                <p class="card-text">Add pokemon total defense by 1 (100 gold)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }; %>
+
+
+      <% if(items.combinationPotion != 0){ %>
+      <div class="col-md-4 col-lg-3 my-2">
+        <div class="card mb-3 h-100" style="max-width: 400px;">
+          <div class="row no-gutters">
+            <div class="col-4">
+              <img src="../statics/itemsImg/combinationPotion.jpg" class="card-img" alt="...">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <h5 class="card-title">combinationPotion: <%= items.combinationPotion %></h5>
+                <p class="card-text">Add pokemon total health, strength defense by 1% (20 diamond)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }; %>
+
+
+      <% if(items.moomooMilk != 0){ %>
+      <div class="col-md-4 col-lg-3 my-2">
+        <div class="card mb-3 h-100" style="max-width: 400px;">
+          <div class="row no-gutters">
+            <div class="col-4">
+              <img src="../statics/itemsImg/moomooMilk.jpg" class="card-img" alt="...">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <h5 class="card-title">moomooMilk: <%= items.moomooMilk %></h5>
+                <p class="card-text">Increasing the pokemon quality by -0.2 to 0.2 (100 gold)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }; %>
+
+
+      <% if(items.magicalWater != 0){ %>
+      <div class="col-md-4 col-lg-3 my-2">
+        <div class="card mb-3 h-100" style="max-width: 400px;">
+          <div class="row no-gutters">
+            <div class="col-4">
+              <img src="../statics/itemsImg/magicalWater.jpg" class="card-img" alt="...">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <h5 class="card-title">magicalWater: <%= items.magicalWater %></h5>
+                <p class="card-text">Reseting the pokemon quality (50 diamond)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }; %>
+
+
+      <% if(items.evolutionStone != 0){ %>
+      <div class="col-md-4 col-lg-3 my-2">
+        <div class="card mb-3 h-100" style="max-width: 400px;">
+          <div class="row no-gutters">
+            <div class="col-4">
+              <img src="../statics/itemsImg/evolutionStone.jpg" class="card-img" alt="...">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <h5 class="card-title">evolutionStone: <%= items.evolutionStone %></h5>
+                <p class="card-text">Evolution stone for normal pokemon evolution (20 diamond)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }; %>
+
+
+      <% if(items.superEvolutionStone != 0){ %>
+      <div class="col-md-4 col-lg-3 my-2">
+        <div class="card mb-3 h-100" style="max-width: 400px;">
+          <div class="row no-gutters">
+            <div class="col-4">
+              <img src="../statics/itemsImg/superEvolutionStone.jpg" class="card-img" alt="...">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <h5 class="card-title">superEvolutionStone: <%= items.superEvolutionStone %></h5>
+                <p class="card-text">Evolution from purple pokemon to gold pokemon (50 diamond)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }; %>
+
+
+    </div>
+  </div>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>

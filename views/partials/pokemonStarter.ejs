@@ -1,0 +1,23 @@
+<% if(user.pokemonNum === 0){ %>
+<h1>Welcome</h1>
+<h3>Choose your pokemon</h3>
+  <div class="container">
+    <div class="row">
+      <% newPokemons.forEach( (item) => { %>
+      <div class="col-4 my-2">
+        <div class="card">
+          <img class="card-img-top" src="../statics/img/<%= item %>.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"><%= item %></h5>
+            <!-- <p>introduction to ........</p> -->
+            <form id="myForm" action="/newPokemon/<%= item %>" method="post">
+              <!-- <input type="hidden" name="name" value="<%= item %>"> -->
+              <button class="btn btn-primary">Go</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+  </div>
+<% }; %>

@@ -1,0 +1,27 @@
+1. Learn PVE game system online and finish it. 
+
+2. Learn real time chat room (socket.io).
+
+3. Combine PVE system and socket.io to build PVP system.
+
+4. Connect PVP system with user account Database.
+
+5. Add pokemon starter system.
+
+6. Add animation video for each pokemon.
+
+7. Separate the rooms(join room).
+
+8. Separate the rooms(disconnect room).
+
+9. Add room table to database instead of storing room information in app.js.
+   But we still store connections, user pokemon info in the app.js since we 
+   need to modify them all the time.
+
+10. Add pokemon book table to database, and add experience system.
+
+11. Add packages tables to database, and add drop item system.
+
+12. Add skill type and skill k value system.
+
+13. Improve css 

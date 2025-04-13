@@ -1,0 +1,50 @@
+/** pvp *************************************************************************/
+* {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  width: 200px;
+  height: auto;
+}
+
+.header p {
+  font-family: arial;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.arena-img{
+  visibility: hidden;
+  width: 100%;
+  height: auto;
+
+}
+
+#startG {
+  color: red;
+}
+
+/** video *************************************************************************/
+video {
+  width: 80%;
+  height: auto;
+}
+
+video#watchMe {
+    z-index: 9999;
+    position:relative;
+}
+
+#overlay {
+    z-index: 9998;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    background: rgba(0, 0, 0, 0.92);
+}
+/***************************************************************************/

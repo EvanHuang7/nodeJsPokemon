@@ -1,0 +1,161 @@
+CREATE TABLE users(
+    id INT(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    email VARCHAR(100) NOT NULL,
+    username VARCHAR(100) DEFAULT 'New user',
+    password VARCHAR(100) NOT NULL,
+    pokemonNum INT(10) DEFAULT 0
+);
+
+CREATE TABLE packages(
+    id INT(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    goldCoin INT(10) DEFAULT 100,
+    diamond INT(10) DEFAULT 10,
+    candy INT(10) DEFAULT 0,
+    marioMushroom INT(10) DEFAULT 0,
+    healthPotion INT(10) DEFAULT 0,
+    strengthPotion INT(10) DEFAULT 0,
+    defensePotion INT(10) DEFAULT 0,
+    combinationPotion INT(10) DEFAULT 0,
+    moomooMilk INT(10) DEFAULT 0,
+    magicalWater INT(10) DEFAULT 0,
+    evolutionStone INT(10) DEFAULT 0,
+    superEvolutionStone INT(10) DEFAULT 0,
+    user_id INT(10) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+
+
+CREATE TABLE usersPokemons(
+    userP_id INT(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    level INT(10) NOT NULL,
+    experience INT(10) NOT NULL,
+    health INT(10) NOT NULL,
+    strength INT(10) NOT NULL,
+    defense INT(10) NOT NULL,
+    rage INT(10) NOT NULL,
+    speed INT(10) NOT NULL,
+    skill1 VARCHAR(100) NOT NULL,
+    skill2 VARCHAR(100) NOT NULL,
+    skill3 VARCHAR(100) NOT NULL,
+    skill4 VARCHAR(100) NOT NULL,
+    user_id INT(10) NOT NULL,
+    color VARCHAR(100) NOT NULL,
+    quality FLOAT(10,3) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+
+CREATE TABLE rooms(
+    room_id INT(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    player1 TEXT,
+    player2 TEXT,
+    creator_id INT(10) NOT NULL,
+    FOREIGN KEY (creator_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+
+CREATE TABLE pokemonsBook(
+    pm_id INT(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    level INT(10) NOT NULL,
+    health INT(10) NOT NULL,
+    strength INT(10) NOT NULL,
+    defense INT(10) NOT NULL,
+    rage INT(10) NOT NULL,
+    speed INT(10) NOT NULL,
+    skill1 VARCHAR(100) NOT NULL,
+    skill2 VARCHAR(100) NOT NULL,
+    skill3 VARCHAR(100) NOT NULL,
+    skill4 VARCHAR(100) NOT NULL,
+    skillType1 VARCHAR(100) NOT NULL,
+    skillType2 VARCHAR(100) NOT NULL,
+    skillType3 VARCHAR(100) NOT NULL,
+    skillType4 VARCHAR(100) NOT NULL,
+    k1 FLOAT(10,2) NOT NULL,
+    k2 FLOAT(10,2) NOT NULL,
+    k3 FLOAT(10,2) NOT NULL,
+    k4 FLOAT(10,2) NOT NULL,
+    color VARCHAR(100) NOT NULL,
+    lowQuality FLOAT(10,3) NOT NULL,
+    highQuality FLOAT(10,3) NOT NULL,
+    evolutionTo VARCHAR(100),
+    evolutionLv INT(10)
+);
+
+
+
+
+
+
+## Remember to register two users in Register page first before running these INSERT command lines
+
+
+INSERT INTO usersPokemons (name, level, experience, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, user_id, color, quality ) VALUES ('水箭龟', 1, 0, 200, 10, 10, 100, 10, 'Aqua Tail', 'Water Pulse', 'Water Gun', 'Hydro Pump', 1, 'purple', 7);
+INSERT INTO usersPokemons (name, level, experience, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, user_id, color, quality ) VALUES ('超级水箭龟', 1, 0, 200, 10, 10, 100, 10, 'Water Gun', 'Hydro Pump', 'Skull Bash', 'Flash Cannon', 1, 'gold', 9);
+INSERT INTO usersPokemons (name, level, experience, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, user_id, color, quality ) VALUES ('喷火龙', 1, 0, 200, 10, 10, 100, 10, 'Dragon Breath', 'Fire Fang', 'Fire Spin', 'Flamethrower', 1, 'purple', 7);
+INSERT INTO usersPokemons (name, level, experience, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, user_id, color, quality ) VALUES ('超级喷火龙X', 1, 0, 200, 10, 10, 100, 10, 'Fire Spin', 'Flamethrower', 'Flare Blitz', 'Inferno', 1, 'gold', 9);
+INSERT INTO usersPokemons (name, level, experience, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, user_id, color, quality ) VALUES ('超级妙蛙花', 1, 0, 200, 10, 10, 100, 10, 'Petal Blizzard', 'Solar Beam', 'Double Edge', 'Solar Cannon', 1, 'gold', 9);
+INSERT INTO usersPokemons (name, level, experience, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, user_id, color, quality ) VALUES ('皮卡丘', 1, 0, 200, 10, 10, 100, 10, 'Thunder Shock', 'Double Team', 'Quick Attack', 'Electro Ball', 1, 'green', 5);
+INSERT INTO usersPokemons (name, level, experience, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, user_id, color, quality ) VALUES ('凤王', 100, 9999, 20000, 1000, 1000, 100, 1000, 'Steel Wing', 'Natural Gift', 'Fire Blast', 'Sacred Fire', 1, 'gold', 10);
+INSERT INTO usersPokemons (name, level, experience, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, user_id, color, quality ) VALUES ('超梦', 1, 0, 200, 10, 10, 100, 10, 'Swift', 'Psycho Cut', 'Aura Sphere', 'Ancient Power', 1, 'gold', 10);
+INSERT INTO usersPokemons (name, level, experience, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, user_id, color, quality ) VALUES ('水君', 1, 0, 200, 10, 10, 100, 10, 'Mist', 'Gust', 'Rain Dance', 'Blizzard', 1, 'gold', 10);
+
+
+INSERT INTO usersPokemons (name, level, experience, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, user_id, color, quality ) VALUES ('水箭龟', 1, 0, 200, 10, 10, 100, 10, 'Aqua Tail', 'Water Pulse', 'Water Gun', 'Hydro Pump', 2, 'purple', 7);
+INSERT INTO usersPokemons (name, level, experience, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, user_id, color, quality ) VALUES ('超级水箭龟', 1, 0, 200, 10, 10, 100, 10, 'Water Gun', 'Hydro Pump', 'Skull Bash', 'Flash Cannon', 2, 'gold', 9);
+INSERT INTO usersPokemons (name, level, experience, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, user_id, color, quality ) VALUES ('喷火龙', 1, 0, 200, 10, 10, 100, 10, 'Dragon Breath', 'Fire Fang', 'Fire Spin', 'Flamethrower', 2, 'purple', 7);
+INSERT INTO usersPokemons (name, level, experience, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, user_id, color, quality ) VALUES ('超级喷火龙X', 1, 0, 200, 10, 10, 100, 10, 'Fire Spin', 'Flamethrower', 'Flare Blitz', 'Inferno', 2, 'gold', 9);
+INSERT INTO usersPokemons (name, level, experience, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, user_id, color, quality ) VALUES ('超级妙蛙花', 1, 0, 200, 10, 10, 100, 10, 'Petal Blizzard', 'Solar Beam', 'Double Edge', 'Solar Cannon', 2, 'gold', 9);
+INSERT INTO usersPokemons (name, level, experience, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, user_id, color, quality ) VALUES ('皮卡丘', 1, 0, 200, 10, 10, 100, 10, 'Thunder Shock', 'Double Team', 'Quick Attack', 'Electro Ball', 2, 'green', 5);
+INSERT INTO usersPokemons (name, level, experience, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, user_id, color, quality ) VALUES ('凤王', 100, 9999, 20000, 1000, 1000, 100, 1000, 'Steel Wing', 'Natural Gift', 'Fire Blast', 'Sacred Fire', 2, 'gold', 10);
+INSERT INTO usersPokemons (name, level, experience, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, user_id, color, quality ) VALUES ('超梦', 1, 0, 200, 10, 10, 100, 10, 'Swift', 'Psycho Cut', 'Aura Sphere', 'Ancient Power', 2, 'gold', 10);
+INSERT INTO usersPokemons (name, level, experience, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, user_id, color, quality ) VALUES ('水君', 1, 0, 200, 10, 10, 100, 10, 'Mist', 'Gust', 'Rain Dance', 'Blizzard', 2, 'gold', 10);
+
+
+
+INSERT INTO pokemonsBook (name, level, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, skillType1, skillType2, skillType3, skillType4, k1, k2, k3, k4, color, lowQuality, highQuality, evolutionTo, evolutionLv) VALUES ('小火龙', 1, 100, 20, 10, 100, 10, 'Scratch', 'Ember', 'Dragon Breath', 'Fire Fang', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 1, 1.1, 1.2, 1.3, 'grey', 1, 5, '火恐龙', 20);
+INSERT INTO pokemonsBook (name, level, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, skillType1, skillType2, skillType3, skillType4, k1, k2, k3, k4, color, lowQuality, highQuality, evolutionTo, evolutionLv) VALUES ('火恐龙', 1, 100, 20, 10, 100, 10, 'Ember', 'Dragon Breath', 'Fire Fang', 'Fire Spin', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 1.1, 1.2, 1.3, 1.4, 'green', 3, 7, '喷火龙', 50);
+INSERT INTO pokemonsBook (name, level, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, skillType1, skillType2, skillType3, skillType4, k1, k2, k3, k4, color, lowQuality, highQuality, evolutionTo, evolutionLv) VALUES ('喷火龙', 1, 100, 20, 10, 100, 10, 'Dragon Breath', 'Fire Fang', 'Fire Spin', 'Flamethrower', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'enemyHealthRelated', 1.2, 1.3, 1.4, 1.5, 'purple', 5, 9, '超级喷火龙X', 80);
+INSERT INTO pokemonsBook (name, level, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, skillType1, skillType2, skillType3, skillType4, k1, k2, k3, k4, color, lowQuality, highQuality) VALUES ('超级喷火龙X', 1, 100, 20, 10, 100, 10, 'Fire Spin', 'Flamethrower', 'Flare Blitz', 'Inferno', 'userStrEnemyDefRelated', 'enemyHealthRelated', 'userStrEnemyDefRelated', 'enemyHealthRelated', 1.4, 1.5, 1.6, 2, 'gold', 7, 10);
+
+
+
+
+INSERT INTO pokemonsBook (name, level, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, skillType1, skillType2, skillType3, skillType4, k1, k2, k3, k4, color, lowQuality, highQuality, evolutionTo, evolutionLv) VALUES ('杰尼龟', 1, 100, 10, 20, 100, 10, 'Bubble', 'Aqua Jet', 'Aqua Tail', 'Water Pulse', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 1, 1.1, 1.2, 1.3, 'grey', 1, 5, '卡咪龟', 20);
+INSERT INTO pokemonsBook (name, level, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, skillType1, skillType2, skillType3, skillType4, k1, k2, k3, k4, color, lowQuality, highQuality, evolutionTo, evolutionLv) VALUES ('卡咪龟', 1, 100, 10, 20, 100, 10, 'Aqua Jet', 'Aqua Tail', 'Water Pulse', 'Water Gun', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 1.1, 1.2, 1.3, 1.4, 'green', 3, 7, '水箭龟', 50);
+INSERT INTO pokemonsBook (name, level, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, skillType1, skillType2, skillType3, skillType4, k1, k2, k3, k4, color, lowQuality, highQuality, evolutionTo, evolutionLv) VALUES ('水箭龟', 1, 100, 10, 20, 100, 10, 'Aqua Tail', 'Water Pulse', 'Water Gun', 'Hydro Pump', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'userHealthRelated', 1.2, 1.3, 1.4, 1.5, 'purple', 5, 9, '超级水箭龟', 80);
+INSERT INTO pokemonsBook (name, level, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, skillType1, skillType2, skillType3, skillType4, k1, k2, k3, k4, color, lowQuality, highQuality) VALUES ('超级水箭龟', 1, 100, 10, 20, 100, 10, 'Water Gun', 'Hydro Pump', 'Skull Bash', 'Flash Cannon', 'userStrEnemyDefRelated', 'userHealthRelated', 'userStrEnemyDefRelated', 'userHealthRelated', 1.4, 1.5, 1.6, 2, 'gold', 7, 10);
+
+
+
+
+INSERT INTO pokemonsBook (name, level, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, skillType1, skillType2, skillType3, skillType4, k1, k2, k3, k4, color, lowQuality, highQuality, evolutionTo, evolutionLv) VALUES ('妙蛙种子', 1, 200, 10, 10, 100, 10, 'Vine Whip', 'Power Whip', 'Razor Leaf', 'Seed Bomb', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 1, 1.1, 1.2, 1.3, 'grey', 1, 5, '妙蛙草', 20);
+INSERT INTO pokemonsBook (name, level, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, skillType1, skillType2, skillType3, skillType4, k1, k2, k3, k4, color, lowQuality, highQuality, evolutionTo, evolutionLv) VALUES ('妙蛙草', 1, 200, 10, 10, 100, 10, 'Power Whip', 'Razor Leaf', 'Seed Bomb', 'Petal Blizzard', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 1.1, 1.2, 1.3, 1.4, 'green', 3, 7, '妙蛙花', 50);
+INSERT INTO pokemonsBook (name, level, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, skillType1, skillType2, skillType3, skillType4, k1, k2, k3, k4, color, lowQuality, highQuality, evolutionTo, evolutionLv) VALUES ('妙蛙花', 1, 200, 10, 10, 100, 10, 'Razor Leaf', 'Seed Bomb', 'Petal Blizzard', 'Solar Beam', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'recovery', 1.2, 1.3, 1.4, 1.5, 'purple', 5, 9 , '超级妙蛙花', 80);
+INSERT INTO pokemonsBook (name, level, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, skillType1, skillType2, skillType3, skillType4, k1, k2, k3, k4, color, lowQuality, highQuality) VALUES ('超级妙蛙花', 1, 200, 10, 10, 100, 10, 'Petal Blizzard', 'Solar Beam', 'Double Edge', 'Solar Cannon', 'userStrEnemyDefRelated', 'recovery', 'userStrEnemyDefRelated', 'recovery', 1.4, 1.5, 1.6, 2, 'gold', 7, 10);
+
+
+
+
+INSERT INTO pokemonsBook (name, level, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, skillType1, skillType2, skillType3, skillType4, k1, k2, k3, k4, color, lowQuality, highQuality, evolutionTo, evolutionLv) VALUES ('皮卡丘', 1, 100, 20, 20, 100, 10, 'Thunder Shock', 'Double Team', 'Quick Attack', 'Electro Ball', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 1.2, 1.3, 1.4, 1.7, 'green', 3, 7, '雷丘', 50);
+INSERT INTO pokemonsBook (name, level, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, skillType1, skillType2, skillType3, skillType4, k1, k2, k3, k4, color, lowQuality, highQuality) VALUES ('雷丘', 1, 100, 20, 20, 100, 10, 'Double Team', 'Quick Attack', 'Thunder Punch', 'Thunderbolt', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'userHealthRelated', 1.3, 1.4, 1.8, 2, 'purple', 5, 9);
+
+
+
+
+INSERT INTO pokemonsBook (name, level, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, skillType1, skillType2, skillType3, skillType4, k1, k2, k3, k4, color, lowQuality, highQuality) VALUES ('凤王', 1, 200, 10, 10, 100, 10, 'Steel Wing', 'Natural Gift', 'Fire Blast', 'Sacred Fire', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'recovery', 1.8, 1.9, 2, 3, 'gold', 9, 10);
+INSERT INTO pokemonsBook (name, level, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, skillType1, skillType2, skillType3, skillType4, k1, k2, k3, k4, color, lowQuality, highQuality) VALUES ('超梦', 1, 100, 20, 10, 100, 10, 'Swift', 'Psycho Cut', 'Aura Sphere', 'Ancient Power', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'enemyHealthRelated', 1.8, 1.9, 2, 3, 'gold', 8, 10);
+INSERT INTO pokemonsBook (name, level, health, strength, defense, rage, speed, skill1, skill2, skill3, skill4, skillType1, skillType2, skillType3, skillType4, k1, k2, k3, k4, color, lowQuality, highQuality) VALUES ('水君', 1, 100, 10, 20, 100, 10, 'Mist', 'Gust', 'Rain Dance', 'Blizzard', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'userStrEnemyDefRelated', 'enemyHealthRelated', 1.8, 1.9, 2, 3, 'gold', 7, 10);
+
+
+
+
+
+
+
+
+
+
+

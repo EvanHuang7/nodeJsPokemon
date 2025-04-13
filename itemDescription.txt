@@ -1,0 +1,42 @@
+
+1. goldCoin: used for buying items and normal pokemon lottery(1000 gold). drop: 1000/1000
+
+
+2. diamond: used for buying items and golden card pokemon lottery(100 diamond). drop: 7%
+
+
+3. candy: increasing pokemon 100 experience (10 gold). drop: 30%
+
+
+4. marioMushroom: increasing pokemon 1 level (500 gold). drop: 7%
+
+
+5. healthPotion: add pokemon total health by 10 (100 gold). drop: 10%
+
+
+6. strengthPotion: add pokemon total strength by 1 (100 gold). drop: 10%
+
+
+7. defensePotion: add pokemon total defense by 1 (100 gold). drop: 10%
+
+
+8. combinationPotion: add pokemon total health, strength defense by 1% (20 diamond). drop: 2%
+
+
+9. moomooMilk: Radomly increasing or dereasing the pokemon quality by -0.2 to 0.2 (100 gold). 10%
+
+
+10. magicalWater: used for reseting the pokemon quality (50 diamond). drop: 1%
+
+
+11. evolutionStone: used for evolution from grey card to green card or from green 
+    card to purple card (20 diamond). drop: 2%
+
+
+12. superEvolutionStone: used for evolution from purple card to gold card (50 
+    diamond). drop: drop: 1%
+
+
+
+
+

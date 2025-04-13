@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./partials/header.ejs'); %>
+  <!-- fontawesome -->
+  <script src="https://use.fontawesome.com/releases/v5.10.1/js/all.js"></script>
+  <link rel="stylesheet" href="../statics/main.css">
+  <title>Profile</title>
+</head>
+<body>
+<%- include('./partials/navbar.ejs'); %>
+<%- include('./partials/pokemonStarter.ejs'); %>
+
+
+ <div class="container ">
+   <h1>My Profile</h1>
+   <h3><span class="fa fa-user"></span> Welcome <%= user.username %></h3>
+   <p>
+    <strong>id</strong> <%= user.id %> <br>
+    <strong>username</strong> <%= user.username %> <br>
+    <strong>pokemon number</strong> <%= user.pokemonNum %> <br>
+   </p>
+  <!-- <a href="/pvp" class="btn btn-primary">PVP Game</a> -->
+  <a href="/pvpRooms" class="btn btn-primary">PVP Rooms</a>
+  <a href="/package" class="btn btn-primary">My Package</a>
+ </div>
+
+
+
+
+ <% if(typeof pokemons != 'undefined'){ %>
+   <div class="container">
+     <div class="row">
+       <% pokemons.forEach( (item) => { %>
+         <div class="col-lg-6 my-2">
+
+           <div class="card mb-3" style="max-width: 540px;">
+             <div class="row no-gutters">
+               <div class="col-4" style="border-style: double;
+               border-color: <%= item.color %>">
+                 <img src="../statics/img/<%= item.name %>.jpg" class="card-img" alt="...">
+               </div>
+               <div class="col-8">
+                 <div class="card-body">
+                   <h5 class="card-title"><%= item.name %></h5>
+                   <p class="card-text">LV: <%= item.level %> &nbsp Exp: <%= item.level * 100 %>/<%= item.experience %></p>
+                   <p class="card-text"><i class="fas fa-tint"></i>: <%= item.health %> &nbsp <i class="fas fa-hammer"></i>: <%= item.strength %></p>
+                   <p class="card-text"><i class="fas fa-shield-alt"></i>: <%= item.defense %> &nbsp <i class="fas fa-wind"></i>: <%= item.speed %></p>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+      <% }); %>
+   </div>
+  </div>
+ <% }; %>
+
+
+
+
+ <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <%- include('./partials/header.ejs'); %>
+  <link rel="stylesheet" href="../statics/main.css">
+  <title>PVP Rooms</title>
+</head>
+
+<body>
+  <h1>PVP Rooms</h1>
+  <form action="/pvpRooms" method="post">
+    <button type="submit" class="btn btn-primary">create a room</button>
+  </form>
+  <form action="/pvpRooms?_method=DELETE" method="post">
+
+  </form>
+  <br>
+  <h4>Avalialbe rooms</h4>
+  <% for (var i = 0; i < emptyRooms.length; i++) { %>
+    <p>
+      <a href="/pvp/<%= emptyRooms[i].room_id %>">Room: <%= emptyRooms[i].room_id %></a>
+      <form action="/pvpRooms?_method=DELETE" method="post">
+        <input type="hidden" name="roomNumber" value="<%= emptyRooms[i].room_id %>">
+        <% if (emptyRooms[i].creator_id === userId){ %>
+          <button type="submit" class="btn btn-outline-primary btn-sm">delete room</button>
+        <% }; %>
+      </form>
+    </p>
+  <% }; %>
+
+  <h4>Full rooms</h4>
+  <% for (var i = 0; i < fullRooms.length; i++) { %>
+    <p>Room: <%= fullRooms[i].room_id %></p>
+    <form action="/pvpRooms?_method=DELETE" method="post">
+      <input type="hidden" name="roomNumber" value="<%= fullRooms[i].room_id %>">
+      <% if (fullRooms[i].creator_id === userId){ %>
+        <button type="submit" class="btn btn-outline-primary btn-sm">delete room</button>
+      <% }; %>
+    </form>
+  <% }; %>
+
+
+</body>
+
+</html>
