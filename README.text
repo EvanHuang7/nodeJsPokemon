@@ -1,3 +1,14 @@
+# Project Info
+
+This is a demo video of a Pokémon PVP game project written in Node.js. I attempted to complete it during my 3rd year at the University of Saskatchewan in 2020, but I didn't have enough time to finish it before starting my first job.
+
+Used tech stacks: Node.js, JavaScript, socket.io and mySQL
+
+Youtube video link: https://youtu.be/t2QbrvPzEKo
+
+Github code link: https://github.com/EvanHuang7/nodeJsPokemon
+
+
 # How to Run this Project
 
 1.Start mySql server with command line "sudo /usr/local/mysql/support-files/mysql.server start" in mac terminal.
