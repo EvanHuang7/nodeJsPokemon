@@ -12,6 +12,14 @@ This is a real-time Pokémon PVP game built with **Node.js**. Users can select t
 
 Node.js, JavaScript, socket.io and mySQL
 
+## 🚀 Features
+
+- **User Accounts & Profiles**: Users can sign in with email and password, view their profile, and manage their Pokémon collection with stats like level, attack, defense, and speed.
+
+- **PvP Room System**: Players can create, join, or delete battle rooms. A lobby displays available rooms for quick matchmaking.
+
+- **Real-Time Pokémon Battles**: Players select their Pokémon and engage in animated, turn-based battles. Moves affect health and stats in real time, showcasing each Pokémon’s unique abilities.
+
 ## ⚙️ Start Project
 
 1. Start mySql server with command line `sudo /usr/local/mysql/support-files/mysql.server start` in mac terminal.
