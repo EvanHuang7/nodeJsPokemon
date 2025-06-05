@@ -10,7 +10,7 @@ This is a real-time Pokémon PVP game built with **Node.js**. Users can select t
 
 ## 🛠️ Tech Stack
 
-**Node.js, JavaScript, Socket.io and MySQL**
+**Node.js, Express.js, JavaScript, Socket.io and MySQL**
 
 ## 🚀 Features
 
@@ -30,7 +30,7 @@ This is a real-time Pokémon PVP game built with **Node.js**. Users can select t
 
 4. Copy all `CREATE TABLE` queries in `mysql.text` file and run them in the query tab of `pokemon` schema.
 
-5. After creating all mySql tables, we can run `npx nodemon app.js` command line to start project.
+5. After creating all mySql tables, we can run `npm run dev` command line to start project.
     - **Note**: Remember to install all necessary modules by running `npm install` command line first
 
 6. After project is running, we go to `http://localhost:8080/` page and register 2 accounts first, so that we can run the rest of `INSERT` queries in `mysql.text` file to add pokemons for these 2 users latter.
