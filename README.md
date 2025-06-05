@@ -10,7 +10,7 @@ This is a real-time Pokémon PVP game built with **Node.js**. Users can select t
 
 ## 🛠️ Tech Stack
 
-Node.js, JavaScript, socket.io and mySQL
+**Node.js, JavaScript, Socket.io and MySQL**
 
 ## 🚀 Features
 
