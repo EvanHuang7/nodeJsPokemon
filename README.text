@@ -1,34 +1,37 @@
-# Project Info
+## 📋 Project Info
 
-This is a demo video of a Pokémon PVP game project written in Node.js. I attempted to complete it during my 3rd year at the University of Saskatchewan in 2020, but I didn't have enough time to finish it before starting my first job.
+This is a real-time Pokémon PVP game built with **Node.js**. Users can select their Pokémon and battle other players in interactive multiplayer rooms.
 
-Used tech stacks: Node.js, JavaScript, socket.io and mySQL
+📌 **Note**: This project was completed in **2020**, during my **3nd year at the University of Saskatchewan**.
 
-Youtube video link: https://youtu.be/n0op8SBGiAo
+- **Youtube demo link**: https://youtu.be/n0op8SBGiAo
 
-Github code link: https://github.com/EvanHuang7/nodeJsPokemon
+- **Github code link**: https://github.com/EvanHuang7/nodeJsPokemon
 
+## 🛠️ Tech Stack
 
-# How to Run this Project
+Node.js, JavaScript, socket.io and mySQL
 
-1.Start mySql server with command line "sudo /usr/local/mysql/support-files/mysql.server start" in mac terminal.
+## ⚙️ Start Project
 
-2.Open MYSQLWorkbench app and create a new connection called "pokemon" and set password to "123456789".
+1. Start mySql server with command line "sudo /usr/local/mysql/support-files/mysql.server start" in mac terminal.
 
-3.Click into "pokemon" connection, create a new schema called "pokemon" and set it to default schema.
+2. Open MYSQLWorkbench app and create a new connection called "pokemon" and set password to "123456789".
 
-4.Copy all "CREATE TABLE" queries in "mysql.text" file and run them in the query tab of "pokemon" schema.
+3. Click into "pokemon" connection, create a new schema called "pokemon" and set it to default schema.
 
-5.After creating all mySql tables, we can run "npx nodemon app.js" command line to start project.
+4. Copy all "CREATE TABLE" queries in "mysql.text" file and run them in the query tab of "pokemon" schema.
+
+5. After creating all mySql tables, we can run "npx nodemon app.js" command line to start project.
 (Remember to install all necessary modules into node_modules folder by running "npm install" command line first)
 
-6.After project is running, we go to "http://localhost:8080/" page and register 2 accounts first, 
+6. After project is running, we go to "http://localhost:8080/" page and register 2 accounts first, 
 so that we can run the rest of "INSERT" queries in "mysql.text" file to add pokemons for these 2 users latter.
 
-7.After 2 users are registered, copy all the rest of "INSERT" queries in "mysql.text" file and run them in the query tab of "pokemon" schema.
+7. After 2 users are registered, copy all the rest of "INSERT" queries in "mysql.text" file and run them in the query tab of "pokemon" schema.
 
-8.After creating pokemons for these 2 users, we can create a PVP room and 2 users select same PVP room to start a PVP game.
+8. After creating pokemons for these 2 users, we can create a PVP room and 2 users select same PVP room to start a PVP game.
 
-9.Now, it's time for a PVP pokemon fight!!
+9. Now, it's time for a PVP pokemon fight!!
 
-10.After project is done, Remeber to shut down mySql server with command line "sudo /usr/local/mysql/support-files/mysql.server stop" in mac terminal.
+10. After project is done, Remeber to shut down mySql server with command line "sudo /usr/local/mysql/support-files/mysql.server stop" in mac terminal.
