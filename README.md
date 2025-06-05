@@ -2,7 +2,7 @@
 
 This is a real-time Pokémon PVP game built with **Node.js**. Users can select their Pokémon and battle other players in interactive multiplayer rooms.
 
-📌 **Note**: This project was completed in **2020**, during my **3nd year at the University of Saskatchewan**.
+📌 **Note**: This project was completed in **2020**, during my **3rd year at the University of Saskatchewan**.
 
 - **Youtube demo link**: https://youtu.be/n0op8SBGiAo
 
